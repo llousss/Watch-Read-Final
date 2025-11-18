@@ -1,0 +1,437 @@
+:root{
+  --fundo:#f6f8fb;
+  --card:#ffffff;
+  --destaque:#2196f3;
+  --texto-claro:#6b6f76;
+  --largura-max:1100px;
+  --borda-radius:10px;
+}
+
+* { box-sizing:border-box; }
+
+/* seletor de elemento body */
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--fundo);
+  color:#222;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* seletor de classe */
+.container{
+  max-width:var(--largura-max);
+  margin:0 auto;
+  padding:18px;
+}
+
+/* seletor de classe */
+/* cabeçalho */
+.cabecalho{
+  background:var(--destaque);
+  color:#fff;
+  padding:14px 0;
+}
+.cabecalho-interno{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+}
+/* seletor de elemento h1 */
+h1{ margin:0; font-size:20px }
+.marca .tag{ margin:0; font-size:13px; opacity:0.95 }
+.botao-menu{
+  display:none;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* navegação */
+.nav-principal ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.nav-principal a{
+  color:#fff;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:6px;
+}
+.nav-principal a.ativo,
+.nav-principal a:hover{ background:rgba(255,255,255,0.12) }
+
+/* seletor de elemento h2 */
+.introducao{ padding:22px 0; text-align:center }
+h2{ margin:0 0 6px 0; font-size:22px }
+.introducao p{ margin:0; color:var(--texto-claro) }
+
+/* seletor de classe */
+/* ações */
+.acoes{
+  display:flex;
+  gap:12px;
+  margin:20px 0;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+/* seletor de classe */
+/* cards */
+.cards{
+  display:flex;
+  gap:16px;
+  margin-top:18px;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:var(--borda-radius);
+  box-shadow:0 6px 18px rgba(20,30,45,0.06);
+  flex:1 1 220px;
+  min-width:180px;
+}
+
+/* seletor id */
+#card-equipe{
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--borda-radius);
+  box-shadow: 0 6px 18px rgba(20,30,45,0.06);
+  width: 400px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin: auto;
+}
+.card h3{ margin:0 0 8px 0; font-size:15px }
+.valor-grande{ font-size:20px; margin:0 0 6px 0; font-weight:600 }
+.texto-claro{ color:var(--texto-claro); font-size:13px }
+
+/* destaque lista em andamento */
+.card-destaque .lista-em-andamento{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+.card-destaque .lista-em-andamento li {
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* seletor de classe */
+/* painel de grid */
+.grade{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:16px;
+  margin-top:18px;
+}
+.painel{
+  background:var(--card);
+  padding:14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(20,30,45,0.06);
+  min-height:160px;
+}
+.cabecalho-painel h3{ margin:0 0 4px 0 }
+.cabecalho-painel small{ color:var(--texto-claro) }
+.corpo-painel{ margin-top:10px }
+
+/* lista recente */
+.lista-recente{ list-style:none; padding:0; margin:0 }
+.lista-recente li{ padding:8px 0; border-bottom:1px solid #f1f1f1; font-size:14px }
+
+/* botões */
+.botao {
+  display: inline-block;
+  background: var(--destaque);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.botao.ghost{
+  background:transparent;
+  color:var(--destaque);
+  border:2px solid rgba(33,150,243,0.12);
+}
+
+/* seletor de elemento footer */
+footer{ padding:20px 0; text-align:center; color:var(--texto-claro) }
+
+/* responsivo */
+@media (max-width:900px){
+  .grade{ grid-template-columns:1fr; }
+  .botao-menu{ display:inline-block }
+  .nav-principal{ display:none }
+  .nav-principal.aberto{ 
+    display:block; 
+    position:absolute; 
+    right:18px; 
+    top:70px; 
+    background:#fff; 
+    color:#222; 
+    border-radius:8px; 
+    box-shadow:0 8px 30px rgba(0,0,0,0.08); 
+    padding:8px; 
+  }
+  .nav-principal.aberto ul{ flex-direction:column; gap:0 }
+  .nav-principal.aberto a{ color:#222; display:block; padding:10px 14px; border-radius:6px }
+}
+
+/* página de contato */
+
+.card-contato {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.formulario-contato {
+  width: 100%;
+  max-width: 500px;
+}
+
+.campo-formulario {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-formulario label {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  padding: 10px;
+  border-radius: var(--borda-radius);
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--destaque);
+  box-shadow: 0 0 5px rgba(33,150,243,0.4);
+}
+
+.botao-contato {
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+}
+
+/* responsivo */
+@media (max-width:600px){
+  .card-contato {
+    padding: 0 12px;
+  }
+}
+
+/* tabela de livros */
+.tabela-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.tabela-livros {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: var(--borda-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(20,30,45,0.06);
+}
+
+.tabela-livros th,
+.tabela-livros td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabela-livros thead {
+  background: var(--destaque);
+  color: #fff;
+}
+
+.tabela-livros tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.tabela-livros tbody tr:hover {
+  background: rgba(33,150,243,0.08);
+}
+
+.capa {
+  width: 50px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* fixa a largura da coluna "Capa" */
+.tabela-livros th:nth-child(1),
+.tabela-livros td:nth-child(1) {
+  width: 70px;  /* ajuste o valor até ficar como quer */
+  text-align: center;
+}
+
+/* ações de livros */
+.acoes-geral {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.barra-pesquisa {
+  flex: 1;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: var(--borda-radius);
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.btn-acao {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.btn-acao.editar {
+  background: #ffb300;
+  color: #fff;
+}
+
+.btn-acao.excluir {
+  background: #e53935;
+  color: #fff;
+}
+
+/* Tema Escuro */
+
+.tema-escuro {
+    background-color: #121212 !important; /* !important garante que sobrescreve o CSS do body */
+    color: #f0f0f0;
+}
+
+.tema-escuro header, .tema-escuro footer {
+    background-color: #000;
+}
+
+.tema-escuro main {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* texto geral */
+.tema-escuro,
+.tema-escuro p,
+.tema-escuro h1,
+.tema-escuro h2,
+.tema-escuro h3,
+.tema-escuro small,
+.tema-escuro label {
+  color: #f0f0f0 !important;
+}
+
+/* texto secundário */
+.tema-escuro .texto-claro,
+.tema-escuro footer {
+  color: #b0b0b0 !important;
+}
+
+/* cabeçalho e navegação */
+.tema-escuro .cabecalho {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+.tema-escuro .nav-principal a {
+  color: #fff;
+}
+.tema-escuro .nav-principal a:hover,
+.tema-escuro .nav-principal a.ativo {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* cards e painéis */
+.tema-escuro .card,
+.tema-escuro .painel {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* botões */
+.tema-escuro .botao {
+  background: #2196f3;
+  color: #fff;
+}
+.tema-escuro .botao.ghost {
+  color: #2196f3;
+  border-color: rgba(33,150,243,0.4);
+}
+
+/* tabelas */
+.tema-escuro .tabela-livros {
+  background: #1f1f1f;
+  color: #f0f0f0;
+}
+.tema-escuro .tabela-livros thead {
+  background: #2196f3;
+}
+.tema-escuro .tabela-livros tbody tr:nth-child(even) {
+  background: #2a2a2a;
+}
+.tema-escuro .tabela-livros tbody tr:hover {
+  background: rgba(33,150,243,0.15);
+}
+
+/* formulários */
+.tema-escuro input,
+.tema-escuro textarea {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #555;
+}
+.tema-escuro input:focus,
+.tema-escuro textarea:focus {
+  border-color: #2196f3;
+  box-shadow: 0 0 5px rgba(33,150,243,0.6);
+}
+
+/* Ajuste das letras da equipe no tema escuro */
+.tema-escuro #card-equipe,
+.tema-escuro #card-equipe li {
+    color: #000000 !important;
+}

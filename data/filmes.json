@@ -1,0 +1,52 @@
+[
+    {
+        "imagem": {
+            "src": "./imagens/invocacao-do-mal-4-filme.jfif",
+            "alt": "Invocação do mal 4: O Último Ritual"
+        },
+        "titulo": "Invocação do mal 4: O Último Ritual",
+        "genero": "Terror",
+        "status": "Concluído",
+        "avaliação": "⭐⭐⭐⭐"
+    },
+    {
+        "imagem": {
+            "src": "./imagens/amores-materialistas-filme.jpg",
+            "alt": "Amores Materialistas"
+        },
+        "titulo": "Amores Materialistas",
+        "genero": "Romance/Comédia",
+        "status": "Concluído",
+        "avaliação": "⭐⭐⭐⭐⭐"
+    },
+    {
+        "imagem": {
+            "src": "./imagens/faca-ela-voltar-filme.webp",
+            "alt": "Faça Ela Voltar"
+        },
+        "titulo": "Faça Ela Voltar",
+        "genero": "Terror",
+        "status": "Concluído",
+        "avaliação": "⭐⭐⭐⭐"
+    },
+    {
+        "imagem": {
+            "src": "./imagens/clube-da-luta-filme.jpg",
+            "alt": "Clube da Luta"
+        },
+        "titulo": "Clube da Luta",
+        "genero": "Ação/Crime",
+        "status": "Pendente",
+        "avaliação": ""
+    },
+    {
+        "imagem": {
+            "src": "./imagens/parasita-filme.jpg",
+            "alt": "Parasita"
+        },
+        "titulo": "Parasita",
+        "genero": "Thriller/Comédia",
+        "status": "Em Andamento",
+        "avaliação": ""
+    }
+]

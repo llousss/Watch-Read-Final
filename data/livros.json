@@ -1,0 +1,50 @@
+[
+    {
+        "imagem": {
+            "src": "./imagens/Harry-Potter-pedra-filosofal-livro.jpg",
+            "alt": "Harry Potter"
+        },
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "autor": "J. K. Rowling",
+        "status": "Lendo",
+        "avaliação": "⭐⭐⭐⭐⭐"
+    },
+    {
+        "imagem": {
+            "src": "./imagens/senhor-dos-aneis-pt1-livro.jpg",
+            "alt": "O Senhor dos Anéis | Parte 1"
+        },
+        "titulo": "O Senhor dos Anéis",
+        "autor": "J. R. R. Tolkien",
+        "status": "Concluído",
+        "avaliação": "⭐⭐⭐⭐⭐"
+    },    {
+        "imagem": {
+            "src": "./imagens/dom-casmurro-livro.webp",
+            "alt": "Dom Casmurro"
+        },
+        "titulo": "Machado de Assis",
+        "autor": "Ação",
+        "status": "Pendente",
+        "avaliação": "⭐⭐⭐⭐"
+    },    {
+        "imagem": {
+            "src": "./imagens/1984-livro.jpg",
+            "alt": "1984"
+        },
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "status": "Concluído",
+        "avaliação": "⭐⭐⭐⭐"
+    },    {
+        "imagem": {
+            "src": "./imagens/diario-de-anne-frank-livro.jpg",
+            "alt": "O Diário de Anne Frank"
+        },
+        "titulo": "O Diário de Anne Frank",
+        "autor": "Anne Frank",
+        "status": "Lendo",
+        "avaliação": "⭐⭐⭐⭐"
+    }
+
+]

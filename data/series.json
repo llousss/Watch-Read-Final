@@ -1,0 +1,13 @@
+[
+        {
+        "imagem": {
+            "src": "./imagens/shameless-serie.jpg",
+            "alt": "Shameless"
+        },
+        "titulo": "Shameless",
+        "genero": "Drama",
+        "tempat": "1ª Temporada",
+        "status": "Em Andamento",
+        "avaliação": "⭐⭐⭐⭐⭐"
+    }
+]
