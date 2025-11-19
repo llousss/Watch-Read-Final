@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (temaSalvo === 'dark') {
             body.classList.add('tema-escuro');
             if (btnAlternarTema) {
-            btnAlternarTema.textContent = 'Alternar para Tema Claro';
+            btnAlternarTema.textContent = '☀️';
             }
         } else {
             body.classList.remove('tema-escuro');
             if (btnAlternarTema) {
-            btnAlternarTema.textContent = 'Alternar para Tema Escuro';
+            btnAlternarTema.textContent = '🌙';
             }
         }
     }
@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (body.classList.contains('tema-escuro')) {
             novoTema = 'dark';
-            btnAlternarTema.textContent = 'Alternar para Tema Claro';
+            btnAlternarTema.textContent = '☀️';
         } else {
             novoTema = 'light';
-            btnAlternarTema.textContent = 'Alternar para Tema Escuro';
+            btnAlternarTema.textContent = '🌙';
     }
 
     localStorage.setItem('preferenciaTema', novoTema);
