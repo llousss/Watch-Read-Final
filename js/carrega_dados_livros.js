@@ -15,7 +15,7 @@ function carregarLivrosJSON() {
         })
         .catch(error => {
             console.error('Houve um erro ao carregar o catálogo:', error);
-            tabelaCorpo.innerHTML = `<tr><td colspan="5">Erro ao carregar os livros.</td></tr>`;
+            tabelaCorpo.innerHTML = `<tr><td colspan="7">Erro ao carregar os livros.</td></tr>`;
         });
 
 }
@@ -31,6 +31,16 @@ function renderizarLivros(livros) {
                 <td>${livro.autor}</td>
                 <td>${livro.status}</td>
                 <td>${livro.avaliação}</td>
+
+                <!-- Botões de ação -->
+                <td>
+                    <a href="livros/edit.php?id=${livro.id}" class="btn-editar">✏️ Editar</a>
+                </td>
+                <td>
+                    <a href="livros/delete.php?id=${livro.id}" 
+                       class="btn-excluir"
+                       onclick="return confirm('Deseja excluir este livro?')">🗑️ Excluir</a>
+                </td>
             </tr> 
         `;
     });

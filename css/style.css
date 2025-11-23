@@ -318,24 +318,6 @@ footer{ padding:20px 0; text-align:center; color:var(--texto-claro) }
   font-size: 14px;
 }
 
-.btn-acao {
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 13px;
-  cursor: pointer;
-  margin-right: 4px;
-}
-
-.btn-acao.editar {
-  background: #ffb300;
-  color: #fff;
-}
-
-.btn-acao.excluir {
-  background: #e53935;
-  color: #fff;
-}
 
 /* Tema Escuro */
 
@@ -434,4 +416,25 @@ footer{ padding:20px 0; text-align:center; color:var(--texto-claro) }
 .tema-escuro #card-equipe,
 .tema-escuro #card-equipe li {
     color: #000000 !important;
+}
+
+.btn-editar {
+    padding: 4px 8px;
+    background-color: #2d89ef;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-excluir {
+    padding: 4px 8px;
+    background-color: #e81123;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-editar:hover,
+.btn-excluir:hover {
+    opacity: .8;
 }
