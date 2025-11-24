@@ -8,6 +8,6 @@
         <li><a href="contato.php"><b>Contato</b></a></li>
         <li><a href="equipe.php"><b>Equipe</b></a></li>
         <a id="alternaTema" href="#"><b>Alternar para Tema Escuro</b></a>
-        <li><a href="auth/login.html"><b>Entrar</b></a></li>
+        <li><a href="login.php"><b>Entrar</b></a></li>
     </ul>
 </nav>
