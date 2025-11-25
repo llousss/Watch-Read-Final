@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Se o usuário não estiver logado, volta pro login
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,7 +36,7 @@
 
     <section class="cartoes card-contato">
       <article class="card">
-        <form action="#" method="post" class="formulario-contato">
+        <form action="salvar_contato.php" method="post" class="formulario-contato">
           <div class="campo-formulario">
             <label for="id_nome">Nome:</label>
             <input type="text" name="nome" id="id_nome" placeholder="Seu nome completo" required>
@@ -39,7 +49,7 @@
 
           <div class="campo-formulario">
             <label for="id_cpf">CPF:</label>
-            <input type="text" id="id_cpf" placeholder="999.999.999-99" maxlength="14" required>
+            <input type="text" name="cpf" id="id_cpf" placeholder="999.999.999-99" maxlength="14" required>
           </div>
 
           <div class="campo-formulario">

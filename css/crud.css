@@ -1,0 +1,117 @@
+/* ===============================
+   CRUD UNIVERSAL - Watch&Read
+   Usado em: Livros, Filmes, Séries
+   =============================== */
+:root {
+    --fundo:#f6f8fb;
+    --card:#ffffff;
+    --destaque:#2196f3;
+    --texto-claro:#6b6f76;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--fundo);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL */
+.crud-container {
+    background: var(--card);
+    width: 100%;
+    max-width: 520px;
+    padding: 25px 30px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* TÍTULO */
+.crud-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--destaque);
+    font-size: 26px;
+}
+
+/* FORMULÁRIO */
+.crud-form label {
+    display: block;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--texto-claro);
+}
+
+.crud-form input,
+.crud-form select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 3px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 14px;
+}
+
+.crud-form input[type="file"] {
+    border: none;
+}
+
+/* BOTÃO SALVAR */
+.crud-form button {
+    width: 100%;
+    margin-top: 20px;
+    background: var(--destaque);
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.crud-form button:hover {
+    opacity: 0.85;
+}
+
+/* BOTÃO VOLTAR */
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background: #ddd;
+    border-radius: 8px;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    background: #ccc;
+}
+
+/* MODO ESCURO */
+.tema-escuro .crud-container {
+    background: #1f1f1f;
+}
+
+.tema-escuro .crud-form input,
+.tema-escuro .crud-form select {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+.tema-escuro .voltar {
+    background: #333;
+    color: #eee;
+}

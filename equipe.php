@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Se o usuário não estiver logado, volta pro login
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

@@ -9,9 +9,10 @@ $titulo = $_POST["titulo"];
 $autor = $_POST["autor"];
 $status = $_POST["status"];
 $avaliacao = $_POST["avaliacao"];
+$usuario_id = $_POST["usuario_id"];
 
-$sql = "INSERT INTO livros (capa, titulo, autor, stts, avaliacao) 
-        VALUES ('$nomeImagem', '$titulo', '$autor', '$status', '$avaliacao')";
+$sql = "INSERT INTO livros (capa, titulo, autor, stts, avaliacao, usuario_id) 
+        VALUES ('$nomeImagem', '$titulo', '$autor', '$status', '$avaliacao', $usuario_id)";
 
 if ($conn->query($sql) === TRUE) {
     header("Location: ../livros.php");
@@ -19,3 +20,4 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Erro: " . $conn->error;
 }
+?>

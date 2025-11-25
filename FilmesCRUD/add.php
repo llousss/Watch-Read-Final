@@ -13,20 +13,18 @@ if (!isset($_SESSION["usuario_id"])) {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Adicionar Livro</title>
+    <title>Adicionar Filme</title>
 
     <!-- CSS universal do CRUD -->
     <link rel="stylesheet" href="../css/crud.css">
 </head>
 <body>
 
-<main class="crud-page">
-
     <div class="crud-container">
 
-        <h2>Adicionar Livro</h2>
+        <h2>Adicionar Filme</h2>
         <p style="text-align:center; margin-top:-10px; color:var(--texto-claro);">
-            Preencha os campos abaixo para adicionar um novo livro à sua coleção.
+            Preencha os campos abaixo para adicionar um novo filme à sua coleção.
         </p>
 
         <form action="salvar.php" method="POST" enctype="multipart/form-data" class="crud-form">
@@ -39,15 +37,15 @@ if (!isset($_SESSION["usuario_id"])) {
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required>
 
-            <!-- AUTOR -->
-            <label for="autor">Autor:</label>
-            <input type="text" id="autor" name="autor">
+            <!-- GÊNERO -->
+            <label for="genero">Gênero:</label>
+            <input type="text" id="genero" name="genero">
 
             <!-- STATUS -->
             <label for="status">Status:</label>
             <select id="status" name="status" required>
-                <option value="Lendo">Lendo</option>
-                <option value="Lido">Lido</option>
+                <option value="Assistindo">Assistindo</option>
+                <option value="Assistido">Assistido</option>
                 <option value="Pendente">Pendente</option>
             </select>
 
@@ -61,11 +59,9 @@ if (!isset($_SESSION["usuario_id"])) {
             <button type="submit">Salvar</button>
         </form>
 
-        <a href="../livros.php" class="voltar">Voltar</a>
+        <a href="../filmes.php" class="voltar">Voltar</a>
 
     </div>
-
-</main>
 
 </body>
 </html>

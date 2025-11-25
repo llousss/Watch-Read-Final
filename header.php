@@ -2,5 +2,9 @@
     <h1>Wacth&Read</h1>
     <p class="tag">Organize Livros, Filmes e Séries com facilidade</p>
 </div>
-<!-- SELETOR DE CLASSE AFETANDO <BUTTON> -->
-<button class="botao-menu" aria-label="Abrir menu">☰</button>
+
+<?php if(isset($_SESSION["usuario_nome"])): ?>
+    <b>
+        <p class="usuario-logado">Olá, <?= $_SESSION["usuario_nome"] ?>!</p>
+    </b>
+<?php endif; ?>

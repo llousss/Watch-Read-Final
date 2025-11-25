@@ -17,19 +17,22 @@ CREATE TABLE filmes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     capa VARCHAR(255),
     titulo VARCHAR(100) NOT NULL,
-    genero VARCHAR(100),
+    diretor VARCHAR(100),
     stts VARCHAR(50) NOT NULL,
-    avaliacao INT
+    avaliacao VARCHAR(5),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
 CREATE TABLE series (
     id INT AUTO_INCREMENT PRIMARY KEY,
     capa VARCHAR(255),
     titulo VARCHAR(100) NOT NULL,
-    genero VARCHAR(50),
-    temporadas VARCHAR(20),
+    temporadas VARCHAR(50),
     stts VARCHAR(50) NOT NULL,
-    avaliacao INT
+    avaliacao VARCHAR(5),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 );
 
 CREATE TABLE usuarios (
@@ -38,3 +41,7 @@ CREATE TABLE usuarios (
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(100) NOT NULL
 );
+
+ALTER TABLE livros MODIFY avaliacao TINYINT;
+ALTER TABLE filmes MODIFY avaliacao TINYINT;
+ALTER TABLE series MODIFY avaliacao TINYINT;

@@ -439,3 +439,10 @@ footer{ padding:20px 0; text-align:center; color:var(--texto-claro) }
     opacity: .8;
 }
 
+.capa-tabela {
+    max-width: 60px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+

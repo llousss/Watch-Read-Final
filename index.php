@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Se o usuário não estiver logado, volta pro login
+if (!isset($_SESSION["usuario_id"])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -29,7 +39,7 @@
 
     <!-- AÇÕES -->
     <section class="acoes">
-      <a href="livros/add.html" class="botao"><b>+</b> Adicionar Livro</a>
+      <a href="LivrosCRUD/add.php" class="botao"><b>+</b> Adicionar Livro</a>
       <a href="filmes/add.html" class="botao"><b>+</b> Adicionar Filme</a>
       <a href="series/add.html" class="botao"><b>+</b> Adicionar Série</a>
       <!-- <a href="relatorios/" class="botao ghost"> Ver Relatórios</a> -->
