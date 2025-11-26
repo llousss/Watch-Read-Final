@@ -36,8 +36,8 @@ if (!isset($_SESSION["usuario_id"])) {
         <label>Episódio:</label>
         <input type="number" name="episodio" min="1" value="1">
 
-        <label>Status:</label>
-        <select name="status" required>
+        <label for="status">Status:</label>
+        <select name="stts" required>
             <option value="Assistindo">Assistindo</option>
             <option value="Assistido">Assistido</option>
             <option value="Pendente">Pendente</option>

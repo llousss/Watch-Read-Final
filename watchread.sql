@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25/11/2025 às 19:43
+-- Tempo de geração: 26/11/2025 às 14:34
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -38,6 +38,13 @@ CREATE TABLE `contato` (
   `data_envio` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Despejando dados para a tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `usuario_id`, `nome`, `email`, `cpf`, `assunto`, `mensagem`, `data_envio`) VALUES
+(1, 2, 'matheus', 'matheus@gmail.com', '433.963.848-06', 'teste1', 'testandoo', '2025-11-25 18:50:25');
+
 -- --------------------------------------------------------
 
 --
@@ -52,15 +59,16 @@ CREATE TABLE `filmes` (
   `stts` varchar(50) NOT NULL,
   `avaliacao` tinyint(4) DEFAULT NULL,
   `usuario_id` int(11) DEFAULT NULL,
-  `genero` varchar(100) DEFAULT NULL
+  `genero` varchar(100) DEFAULT NULL,
+  `data_registro` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Despejando dados para a tabela `filmes`
 --
 
-INSERT INTO `filmes` (`id`, `capa`, `titulo`, `diretor`, `stts`, `avaliacao`, `usuario_id`, `genero`) VALUES
-(5, 'img_1764094302_img_1764094201_3003.jpg', 'Parasita', NULL, 'Pendente', 0, 2, 'Terror');
+INSERT INTO `filmes` (`id`, `capa`, `titulo`, `diretor`, `stts`, `avaliacao`, `usuario_id`, `genero`, `data_registro`) VALUES
+(5, 'img_1764094302_img_1764094201_3003.jpg', 'Parasita', NULL, 'Assistido', 10, 2, 'Terror', '2025-11-26 09:44:42');
 
 -- --------------------------------------------------------
 
@@ -75,15 +83,17 @@ CREATE TABLE `livros` (
   `autor` varchar(100) DEFAULT NULL,
   `stts` varchar(50) NOT NULL,
   `avaliacao` tinyint(4) DEFAULT NULL,
-  `usuario_id` int(11) NOT NULL
+  `usuario_id` int(11) NOT NULL,
+  `data_registro` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Despejando dados para a tabela `livros`
 --
 
-INSERT INTO `livros` (`id`, `capa`, `titulo`, `autor`, `stts`, `avaliacao`, `usuario_id`) VALUES
-(7, 'img_1764090834_1984-livro.jpg', '1984', 'george', 'Lido', 5, 2);
+INSERT INTO `livros` (`id`, `capa`, `titulo`, `autor`, `stts`, `avaliacao`, `usuario_id`, `data_registro`) VALUES
+(7, 'img_1764090834_1984-livro.jpg', '1984', 'george', 'Lido', 5, 2, '2025-11-26 09:44:42'),
+(8, 'img_1764161252.webp', 'dom casmurro', 'machado de assis', 'Lendo', 8, 2, '2025-11-26 09:47:32');
 
 -- --------------------------------------------------------
 
@@ -100,8 +110,16 @@ CREATE TABLE `series` (
   `episodio` int(11) DEFAULT 1,
   `stts` varchar(50) NOT NULL,
   `avaliacao` varchar(5) DEFAULT NULL,
-  `usuario_id` int(11) NOT NULL
+  `usuario_id` int(11) NOT NULL,
+  `data_registro` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Despejando dados para a tabela `series`
+--
+
+INSERT INTO `series` (`id`, `capa`, `titulo`, `genero`, `temporada`, `episodio`, `stts`, `avaliacao`, `usuario_id`, `data_registro`) VALUES
+(4, 'serie_1764163128.jpg', '1984', 'aa', 14, 12, '0', '10', 2, '2025-11-26 10:18:48');
 
 -- --------------------------------------------------------
 
@@ -172,7 +190,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de tabela `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `filmes`
@@ -184,13 +202,13 @@ ALTER TABLE `filmes`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de tabela `series`
 --
 ALTER TABLE `series`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`

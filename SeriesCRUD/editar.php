@@ -53,7 +53,7 @@ $serie = $res->fetch_assoc();
         <input type="number" name="episodio" min="1" value="<?= $serie['episodio'] ?>">
 
         <label>Status:</label>
-        <select name="status">
+        <select name="stts">
             <option value="Assistindo" <?= $serie['stts']=="Assistindo"?"selected":"" ?>>Assistindo</option>
             <option value="Assistido" <?= $serie['stts']=="Assistido"?"selected":"" ?>>Assistido</option>
             <option value="Pendente" <?= $serie['stts']=="Pendente"?"selected":"" ?>>Pendente</option>
