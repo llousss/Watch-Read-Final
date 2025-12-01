@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "localhost:8080";
 $user = "root";
 $pass = "";
 $dbname = "watchread";
